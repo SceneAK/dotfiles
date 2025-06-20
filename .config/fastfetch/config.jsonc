@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+      "type": "file",        // Logo type: auto, builtin, small, file, etc.
+      "source": "~/.config/fastfetch/scene.txt",      // Built-in logo name or file path
+      //"width": 65,           // Width in characters (for image logos)
+      //"height": 35,          // Height in characters (for image logos)
+      "padding": {
+          "top": 1,          // Top padding
+          "left": 1,         // Left padding
+          "right": 0         // Right padding
+      },
+      //"color": {             // Override logo colors
+          //"1": "blue",
+          //"2": "green"
+      //}
+  },
+  "display": {
+      "color": {
+          "title": "38;2;255;145;164",
+          "separator": "38;2;190;250;227",
+          "keys": "38;2;132;232;95",
+          "output": "38;2;190;250;227"
+      }
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    {
+      "type": "host",
+      "key": "Host",
+      "format": "{family}"
+    },
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    {
+      "type": "wm",
+      "key": "WM",
+      "format": "{pretty-name} {version}"
+    },
+    "wmtheme",
+    "theme",
+    "icons",
+    "font",
+    "cursor",
+    "terminal",
+    {
+      "type": "cpu",
+      "key": "CPU",
+      "format": "{name}"
+    },
+    {
+      "type": "gpu",
+      "key": "GPU",
+      "format": "{name}"
+    },
+    {
+      "type": "memory",
+      "key": "Memory",
+      "format": "{used} Used"
+    },
+    {
+      "type": "disk",
+      "key": "{mountpoint}",
+      "format": "{size-used}/{size-total}"
+    },
+    "break",
+    "colors"
+  ]
+}
