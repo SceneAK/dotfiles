@@ -12,3 +12,9 @@ visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
 visualizer_look = "██"
 visualizer_color = "green"
+
+# Lyrics fetching
+lyrics_fetchers = lyricwiki, azlyrics, genius, sing365, lyricsmania, metrolyrics, justsomelyrics, jahlyrics, plyrics, tekstowo, internet
+fetch_lyrics_for_current_song_in_background = yes
+follow_now_playing_lyrics = yes
+store_lyrics_in_song_dir = no

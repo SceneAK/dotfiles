@@ -22,10 +22,18 @@ bindkey "^?" backward-delete-char
 zstyle ':completion:*' menu select
 
 alias ls='ls --color=auto'
-alias clang90=clang -std=90 -Wpedantic -Wextra -Werror 
+alias clang90="clang -std=90 -Wpedantic -Wextra -Werror"
+alias md="nvim ~/.md"
+alias pad="nvim ~/.pad"
 
 phone(){
     ssh u0_518@192.168.2.$1 -p 8022
+}
+phone2(){
+    ssh u0_518@192.168.$1 -p 8022
+}
+phoneip(){
+    ssh u0_518@$1 -p 8022
 }
 
 # SALO
@@ -39,5 +47,6 @@ salo(){
         echo "$current_dir" > "$SALO"
     fi
 }
-
+export PATH=$PATH:$HOME/scripts
+rfkill unblock bluetooth
 fastfetch --disable-linewrap
